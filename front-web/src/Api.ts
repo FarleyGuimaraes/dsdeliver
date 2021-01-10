@@ -2,8 +2,7 @@ import axios from "axios";
 import { OrderPayload } from "./components/Orders/types";
 
 const mapboxToken = process.env.REACT_APP_ACCESS_TOKEN_MAP_BOX;
-//const API_URL = 'http://localhost:8080'
-const API_URL = 'https://farley-dsdeliver-sds2.herokuapp.com'
+const API_URL = process.env.REACT_APP_API_URL;
 
 export function fetchProducts() {
     return axios(`${API_URL}/products`);
